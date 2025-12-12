@@ -1,0 +1,253 @@
+/* GENERAL STYLES */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #0f0f10;
+  color: #eee;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #111;
+}
+header h1 {
+  color: #caa052;
+}
+header nav button {
+  margin-left: 10px;
+  padding: 8px 12px;
+  background-color: #222;
+  color: #eee;
+  border: none;
+  cursor: pointer;
+}
+header nav button:hover {
+  background-color: #333;
+  color: #caa052;
+}
+
+/* PAGE DISPLAY */
+.page { display: none; padding: 20px; }
+.page.active { display: block; }
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #111, #1a1a1a);
+  padding: 60px 10px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+.hero-text {
+  flex: 1 1 300px;
+  color: #caa052;
+  padding: 20px;
+}
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #eee;
+}
+.hero-text button {
+  background-color: #caa052;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  color: #000;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.hero-text button:hover {
+  background-color: #e0b873;
+}
+.hero-image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+.hero-image img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+/* FEATURED WATCHES SECTION */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #caa052;
+  margin-bottom: 40px;
+}
+.watch-details-grid {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  padding: 0 20px 60px 20px;
+}
+.watch-detail-card {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #333;
+  box-shadow: 0 0 20px rgba(202,160,82,0.3);
+  transition: transform 0.3s;
+}
+.watch-detail-card:hover {
+  transform: translateY(-5px);
+}
+.watch-detail-image {
+  flex: 1 1 200px;
+  text-align: center;
+  background: #1a1a1a;
+}
+.watch-detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.watch-detail-info {
+  flex: 1 1 300px;
+  padding: 20px;
+  color: #eee;
+}
+.watch-detail-info h3 {
+  font-size: 1.5rem;
+  color: #caa052;
+  margin-bottom: 10px;
+}
+.aesthetic-text {
+  font-style: italic;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+.watch-detail-info ul {
+  list-style: none;
+  padding: 0;
+}
+.watch-detail-info li {
+  padding: 4px 0;
+  line-height: 1.5;
+  border-bottom: 1px solid #333;
+}
+.watch-detail-info li strong {
+  color: #caa052;
+}
+
+/* SOCIALS / ABOUT ME */
+.socials a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #caa052;
+  text-decoration: none;
+}
+.socials a:hover { text-decoration: underline; }
+
+/* FOOTER */
+footer {
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid #333;
+  margin-top: 20px;
+}
+/* HERO IMAGE SECTION */
+.hero-image {
+  flex: 1 1 1000px;        
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-img {
+  max-width: 75%;         
+  height: auto;            
+  object-fit: contain;     
+  background: transparent; 
+  border-radius: 12px;
+  transition: transform 0.3s; 
+}
+.hero-img:hover {
+  transform: scale(1.05);  
+}
+
+/* FEATURED WATCH DETAIL IMAGES */
+.watch-detail-image {
+  flex: 1 1 200px;        
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent; 
+}
+
+/* Default for all watch images */
+.watch-detail-image img {
+  width: 100%;             
+  max-width: 500px;        
+  height: auto;            
+  object-fit: contain;     
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+.watch-detail-image img:hover {
+  transform: scale(1.05);  
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.filter-group {
+  margin: 5px;
+}
+.filter-btn {
+  background: #222;
+  color: #eee;
+  border: none;
+  padding: 8px 12px;
+  margin: 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.filter-btn.active,
+.filter-btn:hover {
+  background: #caa052;
+  color: #000;
+}
+
+.watch-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  padding: 0 20px;
+}
+
+.watch-card {
+  background: #111;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(202,160,82,0.3);
+  transition: transform 0.3s;
+}
+.watch-card:hover { transform: translateY(-5px); }
+.watch-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+.watch-card h3 { color: #caa052; margin-bottom: 5px; }
+.watch-card p { color: #eee; font-size: 0.85rem; }

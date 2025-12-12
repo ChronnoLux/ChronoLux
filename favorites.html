@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Favorites</title>
+<link rel="stylesheet" href="favorites.css">
+</head>
+<body>
+
+<header>
+  <h1>Favorites</h1>
+  <nav>
+    <button onclick="window.location.href='DM-Watches.html'">Home</button>
+    <button onclick="window.location.href='shop.html'">Shop</button>
+    <button onclick="window.location.href='about1.html'">About</button>
+  </nav>
+</header>
+
+<div class="fav-container" id="fav-container"></div>
+
+<script>
+const PRODUCTS = JSON.parse(localStorage.getItem("PRODUCTS_DATA")) || [];
+let FAVS = JSON.parse(localStorage.getItem("FAV_ITEMS")) || [];
+
+function renderFavs(){
+  const box = document.getElementById("fav-container");
+  box.innerHTML = "";
+
+  if (FAVS.length === 0){
+    box.innerHTML = "<p class='empty'>Your favorites list is empty.</p>";
+    return;
+  }
+
+  FAVS.forEach(id => {
+    const p = PRODUCTS.find(x => x.id == id);
+    if (!p) return;
+
+    const item = document.createElement("div");
+    item.className = "fav-item";
+
+    item.innerHTML = `
+      <div class="fav-left" onclick="window.location.href='product.html?id=${p.id}'">
+        <img src="${p.img}" alt="${p.name}">
+      </div>
+
+      <div class="fav-middle">
+        <h2>${p.name}</h2>
+        <p class="price">$${p.price}</p>
+      </div>
+
+      <div class="fav-right">
+        <button class="remove-btn" onclick="removeFav('${p.id}')">Remove</button>
+      </div>
+    `;
+
+    box.appendChild(item);
+  });
+}
+
+function removeFav(id){
+  FAVS = FAVS.filter(x => x != id);
+  localStorage.setItem("FAV_ITEMS", JSON.stringify(FAVS));
+  renderFavs();
+}
+
+renderFavs();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0f0f10;
+  color: #eee;
+}
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #111;
+}
+
+/* Left side: brand */
+.header-left h1 {
+  color: #caa052;
+  margin: 0;
+  font-size: 2rem;
+}
+.header-left .me {
+  color: #eee;
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+/* Right side: navigation buttons */
+.header-right {
+  display: flex;
+  gap: 15px;
+}
+
+.header-right .nav-btn {
+  padding: 10px 20px;
+  background-color: #222;
+  color: #eee;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.header-right .nav-btn:hover {
+  background-color: #333;
+  color: #caa052;
+}
+
+/* SOCIAL ICONS BELOW HEADER */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.social-icons img {
+  width: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+  filter: drop-shadow(0 0 5px gold)
+          drop-shadow(0 0 10px gold)
+          drop-shadow(0 0 15px gold);
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 10px gold)
+          drop-shadow(0 0 20px gold)
+          drop-shadow(0 0 30px gold);
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .header-right {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .social-icons {
+    justify-content: flex-start;
+  }
+}
+
+
+/* CONTENT */
+.container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+
+/* Intro */
+.intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.intro h2 {
+  font-size: 2.5rem;
+  color: #caa052;
+}
+.intro p {
+  max-width: 900px;
+  margin: 20px auto;
+  line-height: 1.7;
+  font-size: 1.2rem;
+}
+.intro-img {
+  width: 80%;
+  border-radius: 15px;
+  margin-top: 30px;
+}
+
+/* Sections (HubSpot style side-by-side) */
+.row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+.row img {
+  width: 48%;
+  border-radius: 15px;
+}
+.row .text {
+  width: 48%;
+}
+.row .text h3 {
+  font-size: 2rem;
+  color: #caa052;
+}
+.row .text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+.reverse {
+  flex-direction: row-reverse;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  border-top: 1px solid #333;
+  margin-top: 40px;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .row, .reverse {
+    flex-direction: column;
+  }
+  .row img, .text {
+    width: 100%;
+  }
+}

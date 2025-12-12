@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watches Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1>Watches Store</h1>
+    <nav>
+      <button class="nav-btn" data-target="home">Home</button>
+      <a href="shop.html"><button class="nav-btn">Shop</button></a>
+	  <a href="about1.html"><button class="nav-btn">About us</button></a>
+      
+    </nav>
+  </header>
+
+  <!-- HOME SECTION -->
+  <section id="home" class="page active">
+    <div class="hero">
+      <div class="hero-text">
+        <h1>ChronoLux</h1>
+        <p>Discover the perfect timepiece for every moment.</p>
+        <a href="shop.html"><button id="shop-now">Shop Now</button></a>
+
+      </div>
+      <div class="hero-image">
+        <img src="C:\hanel\My Project\Digital marketing-Watches\4.webp" alt="Luxury Watch" />
+      </div>
+    </div>
+	
+
+
+    <!-- FEATURED WATCHES / DETAILS SECTION -->
+<section id="featured-watches">
+  <h2 class="section-title">Signature Timepieces</h2>
+
+  <div class="watch-details-grid">
+    <!-- Classic Mechanical / Luxury Watch -->
+    <div class="watch-detail-card">
+      <div class="watch-detail-image">
+        <img src="C:\hanel\My Project\Digital marketing-Watches\1.png" alt="Classic Luxury Watch">
+      </div>
+      <div class="watch-detail-info">
+        <h3>Classic Swiss Chronometer</h3>
+        <p class="aesthetic-text">Timeless elegance and precision, crafted with traditional Swiss mastery.</p>
+        <ul>
+          <li><strong>Movement:</strong> Swiss Automatic, COSC-certified chronometer</li>
+          <li><strong>Quality Quartz:</strong> N/A — precision mechanical design</li>
+          <li><strong>Mechanical/Automatic:</strong> Self-winding, smooth sweep of seconds</li>
+          <li><strong>Feel:</strong> Balanced, luxurious weight with ergonomic comfort</li>
+          <li><strong>Materials:</strong> Stainless steel, gold accents, premium leather strap</li>
+          <li><strong>Case and Bracelet:</strong> Polished and brushed classic finishes</li>
+          <li><strong>Crystal:</strong> Sapphire crystal, scratch-resistant</li>
+          <li><strong>Finish and Craftsmanship:</strong> Swiss meticulous finishing and detailing</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Electronic / Modern Luxury Watch -->
+    <div class="watch-detail-card">
+      <div class="watch-detail-image">
+        <img src="C:\hanel\My Project\Digital marketing-Watches\5.png" alt="Electronic Luxury Watch">
+      </div>
+      <div class="watch-detail-info">
+        <h3>Premium Smartwatch Edition</h3>
+        <p class="aesthetic-text">Modern luxury meets advanced technology, inspired by Swiss craftsmanship.</p>
+        <ul>
+          <li><strong>Movement:</strong> Electronic precision movement with Swiss-inspired accuracy</li>
+          <li><strong>Quality Quartz:</strong> High accuracy, ultra-reliable timekeeping</li>
+          <li><strong>Mechanical/Automatic:</strong> Digital-enhanced precision</li>
+          <li><strong>Feel:</strong> Smooth, comfortable, elegant on the wrist</li>
+          <li><strong>Materials:</strong> Stainless steel, ceramic, sapphire crystal</li>
+          <li><strong>Case and Bracelet:</strong> Polished and brushed premium finishes</li>
+          <li><strong>Crystal:</strong> Scratch-resistant sapphire-coated glass</li>
+          <li><strong>Finish and Craftsmanship:</strong> Sleek luxury design with Swiss-inspired detailing</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- SHOP SECTION -->
+<section id="shop" class="page">
+  <h2 class="section-title">Shop Our Collection</h2>
+
+  <!-- FILTER BUTTONS -->
+  <div class="filters">
+    <div class="filter-group">
+      <strong>Gender:</strong>
+      <button class="filter-btn active" data-filter-type="gender" data-filter="all">All</button>
+      <button class="filter-btn" data-filter-type="gender" data-filter="men">Men</button>
+      <button class="filter-btn" data-filter-type="gender" data-filter="women">Women</button>
+    </div>
+    <div class="filter-group">
+      <strong>Brand:</strong>
+      <button class="filter-btn active" data-filter-type="brand" data-filter="all">All</button>
+      <button class="filter-btn" data-filter-type="brand" data-filter="Rolex">Rolex</button>
+      <button class="filter-btn" data-filter-type="brand" data-filter="Casio">Casio</button>
+      <button class="filter-btn" data-filter-type="brand" data-filter="Fossil">Fossil</button>
+      <button class="filter-btn" data-filter-type="brand" data-filter="Police">Police</button>
+      <button class="filter-btn" data-filter-type="brand" data-filter="Esprit">Esprit</button>
+      <button class="filter-btn" data-filter-type="brand" data-filter="Polo">Polo</button>
+      <button class="filter-btn" data-filter-type="brand" data-filter="Apple">Apple Smartwatch</button>
+      <button class="filter-btn" data-filter-type="brand" data-filter="Samsung">Samsung Smartwatch</button>
+    </div>
+    <div class="filter-group">
+      <strong>Type:</strong>
+      <button class="filter-btn active" data-filter-type="type" data-filter="all">All</button>
+      <button class="filter-btn" data-filter-type="type" data-filter="sport">Sport</button>
+      <button class="filter-btn" data-filter-type="type" data-filter="casual">Casual</button>
+      <button class="filter-btn" data-filter-type="type" data-filter="luxury">Luxury</button>
+      <button class="filter-btn" data-filter-type="type" data-filter="smartwatch">Smartwatch</button>
+    </div>
+    <div class="filter-group">
+      <strong>Price:</strong>
+      <button class="filter-btn active" data-filter-type="price" data-filter="all">All</button>
+      <button class="filter-btn" data-filter-type="price" data-filter="low">Low</button>
+      <button class="filter-btn" data-filter-type="price" data-filter="high">High</button>
+    </div>
+  </div>
+
+  <!-- WATCHES GRID -->
+  <div id="watch-grid" class="watch-grid"></div>
+</section>
+
+
+  <!-- ABOUT ME SECTION -->
+  <section id="about" class="page">
+    <h2>About Me</h2>
+    <p>Hi, I'm Hanel Misljimi, founder of Watches.bg. Passionate about timepieces!</p>
+    <div class="socials">
+      <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+      <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
+      <a href="mailto:hanelmislimi@gmail.com">Gmail</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Watches Store | All Rights Reserved
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

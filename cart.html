@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cart</title>
+<link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+<header>
+  <h1>My Cart</h1>
+  <nav>
+    <button onclick="window.location.href='DM-Watches.html'">Home</button>
+    <button onclick="window.location.href='shop.html'">Shop</button>
+    <button onclick="window.location.href='about1.html'">About</button>
+  </nav>
+</header>
+
+<div class="cart-container" id="cart-container"></div>
+
+<script>
+const PRODUCTS = JSON.parse(localStorage.getItem("PRODUCTS_DATA")) || [];
+let CART = JSON.parse(localStorage.getItem("CART_ITEMS")) || [];
+
+function renderCart(){
+  const box = document.getElementById("cart-container");
+  box.innerHTML = "";
+
+  if (CART.length === 0){
+    box.innerHTML = "<p class='empty'>Your cart is empty.</p>";
+    return;
+  }
+
+  CART.forEach(id => {
+    const p = PRODUCTS.find(x => x.id == id);
+    if (!p) return;
+
+    const item = document.createElement("div");
+    item.className = "cart-item";
+
+    item.innerHTML = `
+      <div class="cart-left" onclick="window.location.href='product.html?id=${p.id}'">
+        <img src="${p.img}" alt="${p.name}">
+      </div>
+
+      <div class="cart-middle">
+        <h2>${p.name}</h2>
+        <p class="price">$${p.price}</p>
+      </div>
+
+      <div class="cart-right">
+        <button class="remove-btn" onclick="removeItem('${p.id}')">Remove</button>
+      </div>
+    `;
+
+    box.appendChild(item);
+  });
+}
+
+function removeItem(id){
+  CART = CART.filter(x => x != id);
+  localStorage.setItem("CART_ITEMS", JSON.stringify(CART));
+  renderCart();
+}
+
+renderCart();
+</script>
+
+</body>
+</html>

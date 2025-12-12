@@ -9,7 +9,7 @@ window.PRODUCTS = [
         gender: "men",
         type: "luxury",
         price: 86750,
-        img: "shopWatchesImages/1.png",
+        img: "images/1.png",
         desc: "Elegant Swiss watch with gold bezel.",
         characteristics: [
             "Case: Oyster architecture, 40 mm diameter",
@@ -55,3 +55,4 @@ specs: [
 
 // Save your manual data for all pages
 localStorage.setItem("PRODUCTS_DATA", JSON.stringify(window.PRODUCTS));
+
